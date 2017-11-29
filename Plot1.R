@@ -1,3 +1,8 @@
-## Create the histogram Plo 1
-  hist(t$Global_active_power, main="Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
-
+# Plot 1
+# open device
+if(!file.exists('figures')) dir.create('figures')
+png(filename = './figures/plot1.png', width = 480, height = 480, units='px')
+# plot figure
+with(data, hist(Global_active_power, xlab = 'Global Active Power (kilowatt)', main = 'Global Active Power', col = 'red'))
+# close device
+dev.off()
